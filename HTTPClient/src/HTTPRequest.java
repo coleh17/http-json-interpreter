@@ -40,16 +40,20 @@ public class HTTPRequest {
 		//System.out.println(zzz.get("name"));
 		//String[] x = new String[25];
 		
+		String res = "";
+		
 		for (int ii = 0; ii < y.length(); ii++) {
 			JSONObject z = y.getJSONObject(ii);
-			System.out.println((ii+1) + ". " + z.get("name") + " $" + z.get("tacos"));
+			//System.out.println((ii+1) + ". " + z.get("name") + " $" + z.get("tacos"));
+			res += (ii+1) + ". " + z.get("name") + " $" + z.get("tacos") + '\n';
 		}
 		
-		return result.toString();
+		//return result.toString();
+		return res;
 	}
 
 	public static void main(String[] args) throws Exception {
-		System.out.println(getHTML("http://tacoshack.online:4041/richest"));
+		//System.out.println(getHTML("http://tacoshack.online:4041/richest"));
 	}
 
 }
