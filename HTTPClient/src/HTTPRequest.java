@@ -24,20 +24,18 @@ public class HTTPRequest {
 		rd.close();
 		
 		JSONObject mr = new JSONObject(result.toString());
-		JSONArray y = mr.getJSONArray("richest");
+		JSONArray y = mr.getJSONArray("Arr");
 		String res = "";
 		
 		for (int ii = 0; ii < y.length(); ii++) {
 			JSONObject z = y.getJSONObject(ii);
-			res += (ii+1) + ". " + z.get("name") + " $" + z.get("tacos") + '\n';
+			res += z;
 		}
-		
-		//return result.toString();
 		return res;
 	}
 
 	public static void main(String[] args) throws Exception {
-		//System.out.println(getHTML("http://tacoshack.online:4041/richest"));
+		
 	}
 
 }
