@@ -13,7 +13,7 @@ import java.awt.SystemColor;
 import javax.swing.UIManager;
 
 public class HTTP_GUI {
-
+	
 	private JFrame frame;
 
 	public static void main(String[] args) {
@@ -42,8 +42,8 @@ public class HTTP_GUI {
 	
 		String res = "loading...";
 		try {
-			res = HTTPRequest.getHTML("http://tacoshack.online:4041/richest");
-			System.out.println(HTTPRequest.getHTML("http://tacoshack.online:4041/richest"));
+			res = HTTPRequest.getHTML("URL");
+			System.out.println(HTTPRequest.getHTML("URL"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
